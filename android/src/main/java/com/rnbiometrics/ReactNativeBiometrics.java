@@ -52,7 +52,7 @@ public class ReactNativeBiometrics extends ReactContextBaseJavaModule {
     @ReactMethod
     public void isSensorAvailable(Promise promise) {
         try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 ReactApplicationContext reactApplicationContext = getReactApplicationContext();
                 BiometricManager biometricManager = BiometricManager.from(reactApplicationContext);
                 int canAuthenticate = biometricManager.canAuthenticate(BIOMETRIC_STRONG);
